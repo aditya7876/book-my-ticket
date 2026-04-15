@@ -1,0 +1,10 @@
+{
+  "rewrites": [
+    { "source": "/auth/(.*)", "destination": "/api" },
+    { "source": "/seats/(.*)", "destination": "/api" },
+    { "source": "/seats", "destination": "/api" },
+    { "source": "/me", "destination": "/api" },
+    { "source": "/health", "destination": "/api" }
+  ]
+}
+

@@ -91,6 +91,38 @@ npm run dev
 
 Server runs on `http://localhost:8080` (or `PORT`).
 
+## Deploy to Vercel
+
+Vercel cannot run your local Docker Postgres. Use a hosted Postgres (Neon / Supabase / Railway, etc) and set env vars.
+
+### 1) Create a hosted Postgres database
+
+Get connection details (host, port, user, password, db). If your provider requires SSL, set `PGSSL=true`.
+
+### 2) Add Environment Variables in Vercel
+
+In Vercel Project → Settings → Environment Variables:
+
+- `PGHOST`
+- `PGPORT`
+- `PGUSER`
+- `PGPASSWORD`
+- `PGDATABASE`
+- `PGSSL` = `true` (only if your provider requires SSL)
+- `JWT_SECRET`
+- `JWT_EXPIRES_IN` (optional)
+
+### 3) Deploy
+
+- Push the repo to GitHub
+- Import the repo in Vercel
+- Deploy
+
+After deploy, open:
+
+- `/` for the UI
+- `/health` to confirm API+DB is reachable
+
 ## API
 
 ### Auth
