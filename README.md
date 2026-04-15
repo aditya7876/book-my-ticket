@@ -1,4 +1,4 @@
-# Book My Ticket (Hackathon Extension)
+# Book My Ticket (Hackathon)
 
 Backend-only implementation extending the starter code with:
 
